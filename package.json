@@ -1,0 +1,11 @@
+{
+    "name":"twitter-api-node-express",
+    "description":"Twitter JS Client Hooked in with Node and Express",
+    "version":"0.0.1",
+    "dependencies" : {
+        "twitter-js-client" : "*",
+        "body-parser": "^1.12.2",
+    	"express": "^4.12.3"
+    },
+    "license": "MIT"
+}
