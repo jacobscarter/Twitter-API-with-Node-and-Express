@@ -12,6 +12,8 @@ OR
 ```
 bower install twitter-api-node-express
 
+cd ./bower_components/twitter-api-node-express/
+
 npm install
 ```
 
