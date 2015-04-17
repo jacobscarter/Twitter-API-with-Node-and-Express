@@ -3,7 +3,17 @@ Utilize Twitter JS Client with a node/express setup
 
 ## Installation
 
-`npm install twitter-api-node-express`
+```
+npm install twitter-api-node-express
+```
+
+OR
+
+```
+bower install twitter-api-node-express
+
+npm install
+```
 
 ##Notes
 
