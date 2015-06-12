@@ -36,8 +36,8 @@ app.use(express.static('public'));
 app.post('/twitter/user', function (req, res) {
 	var username = req.body.username;
 	var data = twitter.getUser({ screen_name: username}, function(error, response, body){
-		res.send({
-			"error" : error
+		res.status(404).send({
+			"error" : "User Not Found"
 		});
 	}, function(data){
 		res.send({

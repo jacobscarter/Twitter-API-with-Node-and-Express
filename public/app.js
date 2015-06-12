@@ -5,17 +5,12 @@ app.controller('myCtrl', function($scope, TwitterService){
 		console.log("username entered ", username);
 		TwitterService.getUser(username)
 		    .then(function(data){
-		        
-		        if(data.error){
-		        	var errorData = JSON.parse(data.error.data);
-		        	$scope.twitterErrors = errorData.errors[0].message;
-		        } else if (data.result){
-		        	$scope.twitterErrors = undefined;
-		        	$scope.results = JSON.parse(data.result.userData);
-		        }
+		        $scope.twitterErrors = undefined;
+	        	$scope.results = JSON.parse(data.result.userData);
 		    })
 		    .catch(function(error){
 		        console.error('there was an error retrieving data: ', error);
+		        $scope.twitterErrors = error.error;
 		    })
 	}
   
