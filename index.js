@@ -12,10 +12,10 @@ var success = function (data) {
 };
 
 var config = {
-    "consumerKey": "XXXXXXXXXX",
-    "consumerSecret": "XXXXXXXXXX",
-    "accessToken": "XXXXXXXXXX",
-    "accessTokenSecret": "XXXXXXXXXX"
+    "consumerKey": "b7zg7k8fcPvK27sHIOYOwMSqG",
+    "consumerSecret": "orhgMLC0DVxkkELhAYaMw14685FWWmYzhrzxrKtAtT6nlaI9M8",
+    "accessToken": "855355436-Q4bbLZflQuoHP3I5PtQjtXrMDaSQ0WXnM5DXa3TG",
+    "accessTokenSecret": "cYFg5epLwcmDnBzLqImEt45Wg60qUDaZUc6nxDgXz6s3P"
 };
 
 var twitter = new module.exports.Twitter(config);
@@ -30,11 +30,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
  * statically store in declared below (i.e. ./public) *
 */
 
-//app.use(express.static('public'));
-
-app.get('/', function (req, res) {
-  res.send('Welcome to Twitter API with Node and Express!');
-});
+app.use(express.static('public'));
 
 //post to retrieve user data
 app.post('/twitter/user', function (req, res) {
@@ -51,19 +47,6 @@ app.post('/twitter/user', function (req, res) {
 		});
 	});
 });
-
-//get to retrieve auth token
-app.get('/twitter/auth/request', function (req, res) {
-	var username = req.body.username;
-	var data = twitter.getOAuthRequestToken(function(data){
-		res.send({
-			result : {
-				"authToken" : data
-			}
-		});
-	});
-});
-
 
 
 var server = app.listen(3000, function () {
