@@ -1,7 +1,7 @@
 {
     "name":"twitter-api-node-express",
     "description":"Twitter JS Client Hooked in with Node and Express",
-    "version":"0.0.2",
+    "version":"0.1.0",
     "author" : "Jacob Carter",
     "dependencies" : {
         "twitter-js-client" : "*",
