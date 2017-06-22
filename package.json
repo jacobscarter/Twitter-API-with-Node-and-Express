@@ -4,7 +4,7 @@
     "version":"0.1.0",
     "author" : "Jacob Carter",
     "dependencies" : {
-        "twitter-js-client" : "*",
+        "twitter-node-client" : "*",
         "body-parser": "^1.12.2",
     	"express": "^4.12.3"
     },
