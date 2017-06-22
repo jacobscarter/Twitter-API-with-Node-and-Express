@@ -1,4 +1,4 @@
-module.exports = require('./node_modules/twitter-js-client/lib/Twitter');
+module.exports = require('./node_modules/twitter-node-client/lib/Twitter');
 
 var express = require('express');
 var app = express();
